@@ -5,7 +5,7 @@
 #' @return a vector
 #' @export
 #'
-#' @examples
+#' @examples square_val(3)
 square_val <- function(x){
   x^2
 }
