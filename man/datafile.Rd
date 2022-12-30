@@ -1,12 +1,9 @@
-\name{coef}
-\alias{coef}
+\name{constants}
+\alias{constants}
 \title{Dataset with coefficients}
 \description{A dataset containing the coefficients fore computing the inverse Laplace transform in the Abate-Whitt frame work}
-\usage{coef}
+\usage{constants}
 \format{
 A list
-\describe{\item{beta}{beta coefficients}
-\item{eta}{eta coefficients}
-}
 }
 \source{Telek}

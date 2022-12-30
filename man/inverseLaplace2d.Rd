@@ -4,7 +4,7 @@
 \alias{inverseLaplace2d}
 \title{Inverse Laplace transform in 2D}
 \usage{
-inverseLaplace2d(t1, t2, h.star, ..., n = 15)
+inverseLaplace2d(t1, t2, h.star, ..., n = 15, n.cores = 1)
 }
 \arguments{
 \item{t1}{First argument to Laplace transform}
@@ -16,6 +16,8 @@ inverseLaplace2d(t1, t2, h.star, ..., n = 15)
 \item{...}{Additional arguments to h.star}
 
 \item{n}{Accuracy parameter}
+
+\item{n.cores}{Number of cores to use defaults to 1}
 }
 \value{
 Inverse Laplace transform
@@ -24,5 +26,5 @@ Inverse Laplace transform
 Inverse Laplace transform in 2D
 }
 \examples{
-inverseLaplace2d(1,1,function(s1,s2){1/((s1+1)*(s2+1))})
+inverseLaplace2d(c(1,2,c(1,2),function(s1,s2){1/((s1+1)*(s2+1))})
 }
