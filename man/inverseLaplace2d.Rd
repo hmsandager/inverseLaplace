@@ -11,7 +11,7 @@ inverseLaplace2d(t1, t2, h.star, ..., n = 15, n.cores = 1)
 
 \item{t2}{Second argument to Laplace transform}
 
-\item{h.star}{Laplace transform to be inverted}
+\item{h.star}{FUN Laplace transform to be inverted}
 
 \item{...}{Additional arguments to h.star}
 
@@ -26,5 +26,5 @@ Inverse Laplace transform
 Inverse Laplace transform in 2D
 }
 \examples{
-inverseLaplace2d(c(1,2,c(1,2),function(s1,s2){1/((s1+1)*(s2+1))})
+inverseLaplace2d(c(1,2),c(1,2),function(s1,s2){1/((s1+1)*(s2+1))})
 }

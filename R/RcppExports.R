@@ -15,6 +15,6 @@
 #'
 #' @return MPH density evaluation
 mphDensity <- function(t1, t2, eta, beta, alpha, U, R) {
-    .Call('_inverseLaplace_mphDensity', PACKAGE = 'inverseLaplace', t1, t2, eta, beta, alpha, U, R)
+    .Call(`_inverseLaplace_mphDensity`, t1, t2, eta, beta, alpha, U, R)
 }
 

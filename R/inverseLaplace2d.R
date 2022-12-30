@@ -7,14 +7,14 @@ utils::globalVariables(c("constants"))
 #' @param t1 First argument to Laplace transform
 #' @param t2 Second argument to Laplace transform
 #' @param n Accuracy parameter
-#' @param h.star Laplace transform to be inverted
+#' @param h.star FUN Laplace transform to be inverted
 #' @param ... Additional arguments to h.star
 #' @param n.cores Number of cores to use defaults to 1
 #'
 #' @return Inverse Laplace transform
 #' @export
 #'
-#' @examples inverseLaplace2d(c(1,2,c(1,2),function(s1,s2){1/((s1+1)*(s2+1))})
+#' @examples inverseLaplace2d(c(1,2),c(1,2),function(s1,s2){1/((s1+1)*(s2+1))})
 inverseLaplace2d <-
   function(t1,
            t2,
@@ -36,7 +36,7 @@ inverseLaplace2d <-
           h4 = h4 + eta[i] * eta[j] * h.star(beta[i] / t1, beta[j] / t2, ...)
         }
       }
-      Re(h4)
+      Re(h4/(t1*t2))
     },
     t1,
     t2,

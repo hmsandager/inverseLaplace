@@ -3,7 +3,6 @@ utils::globalVariables(c("constants"))
 #'
 #' @importFrom parallel mcmapply
 #' @importFrom utils globalVariables
-#' @importFrom inverseLaplace mphDensity
 #'
 #' @param t1 First vector argument to inverse Laplace transform
 #' @param t2 Second vector argument to inverse Laplace transform
